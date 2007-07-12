@@ -1,0 +1,25 @@
+<%
+  traces = [
+    ["Application Trace", @exception.application_backtrace],
+    ["Framework Trace", @exception.framework_backtrace],
+    ["Full Trace", @exception.clean_backtrace]
+  ]
+  names = traces.collect {|name, trace| name}
+%>
+
+<div id="traces">
+  <% names.each do |name| -%>
+  <% end -%>
+
+  <% traces.each do |name, trace| -%>
+    <h2><%= name %>
+      <a href="#" clicktoshow="<%= name.gsub /\s/, '-' %>">(Show)</a>
+      <a href="#" clicktohide="<%= name.gsub /\s/, '-' %>">(Hide)</a>
+    </h2>    
+      <p class="trace" id="<%= name.gsub /\s/, '-' %>" style="display: <%= name[/App/] ? 'block' : 'none' %>;">
+        <%= trace.join "<br/>" %>
+      </p>
+  <% end -%>
+</div>
+
+<br/>

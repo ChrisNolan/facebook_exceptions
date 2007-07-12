@@ -1,0 +1,32 @@
+<style>
+  .main {
+    padding: 10px;
+  }
+    
+  .bar {
+    width: 616px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #f60;
+  }
+  h2 {
+    padding: 2px 0;
+  }
+  p {
+    border-left: 1px dotted #999;
+    padding-left: 8px;
+  }
+</style>
+
+<% msg = "Rails error: #{ActionController::StatusCodes::SYMBOL_TO_STATUS_CODE[@response_code]} #{@response_code.to_s.gsub("_", " ").capitalize}" %>
+
+<fb:title><%= msg %></fb:title>
+
+<div class="main">
+  <div class="bar">
+    <%= msg %>
+  </div>
+  <div class="contents">
+    <%= @contents %>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<% unless @exception.blamed_files.blank? %>
+  <% if (hide = @exception.blamed_files.length > 8) %>
+    <a href="#" clicktoshow="blame_trace">Show blamed files</a>
+  <% end %>
+  <p id="blame_trace" <%='style="display:none"' if hide %>>
+    <%=h(@exception.describe_blame).gsub("\n", "<br/>") %>
+  </p>
+<% end %>
+
+<%
+  clean_params = request.parameters.clone
+  clean_params.delete("action")
+  clean_params.delete("controller")
+
+  request_dump = clean_params.empty? ? 'None' : clean_params.inspect.gsub(',', ",\n")
+%>
+
+<h2>Params       
+  <a href="#" clicktoshow="parameters">(Show)</a>
+  <a href="#" clicktohide="parameters">(Hide)</a>
+</h2>
+<p style="display: none" id="parameters"><%=h request_dump %></p>
+
+<h2>Session       
+  <a href="#" clicktoshow="session">(Show)</a>
+  <a href="#" clicktohide="session">(Hide)</a>
+</h2>
+<p id="session" style="display:none"><%= request.session.instance_variable_get("@data").inspect %></p>
+
+<h2>Response Headers       
+  <a href="#" clicktoshow="response">(Show)</a>
+  <a href="#" clicktohide="response">(Hide)</a>
+</h2>
+<p id="response" style="display:none"><%= h response ? response.headers.inspect : 'None' %></p>
+
