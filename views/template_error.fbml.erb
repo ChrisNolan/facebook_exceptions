@@ -9,7 +9,7 @@
 </p>
 
 <p>Extracted source (around line <b>#<%=h @exception.line_number %></b>):
-<pre><code><%=h @exception.source_extract %></code></pre></p>
+<pre><code><%=word_wrap(h(@exception.source_extract), 86) %></code></pre></p>
 
 <% @real_exception = @exception
    @exception = @exception.original_exception || @exception %>
