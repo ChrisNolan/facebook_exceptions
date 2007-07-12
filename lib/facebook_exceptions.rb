@@ -8,7 +8,7 @@ class ActionController::CgiRequest
   
 end
 
-class ApplicationController < ActionController::Base
+class ApplicationController
 
   def facebook_rescues_path(template_name)
     "#{File.dirname(__FILE__)}/../views/#{template_name}.fbml.erb"
