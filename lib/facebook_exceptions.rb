@@ -9,7 +9,7 @@ class ActionController::CgiRequest
 end
 
 class ApplicationController
-  unloadable
+#  unloadable # had to revert... instead, remove 'unloadable' from app/controllers/application.rb too
 
   def facebook_rescues_path(template_name)
     "#{File.dirname(__FILE__)}/../views/#{template_name}.fbml.erb"
