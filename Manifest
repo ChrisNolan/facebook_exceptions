@@ -1,0 +1,15 @@
+views/unknown_action.fbml.erb
+views/template_error.fbml.erb
+views/routing_error.fbml.erb
+views/missing_template.fbml.erb
+views/layout.fbml.erb
+views/diagnostics.fbml.erb
+views/_trace.fbml.erb
+views/_request_and_response.fbml.erb
+lib/facebook_exceptions.rb
+init.rb
+Rakefile
+README
+Manifest
+LICENSE
+CHANGELOG

@@ -1,5 +1,35 @@
 
-FacebookExceptions
-==================
+facebook_exceptions
+
+A Rails plugin for rendering application errors directly within Facebook.
+
+== License
 
 Copyright (c) 2007 Cloudburst, LLC, released under the AFL 3.0.
+
+== Requirements
+
+* Edge Rails
+
+= Usage
+
+== Installation
+
+Run the following command in the root of your Rails app:
+  script/plugin install svn://rubyforge.org/var/svn/fauna/facebook_exceptions/trunk
+
+There is no gem version. 
+
+Facebook_exceptions is slated for eventual inclusion in RFacebook (http://rubyforge.org/projects/rfacebook/).
+
+= Extras
+
+== Sample
+
+http://blog.evanweaver.com/images/facebook_exceptions_small.png
+
+== Further resources
+
+* http://blog.evanweaver.com/pages/code#facebook_exceptions
+* http://rubyforge.org/forum/forum.php?forum_id=15872
+
