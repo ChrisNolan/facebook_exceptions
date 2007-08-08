@@ -1,7 +1,6 @@
-# FacebookExceptions
-
 class ActionController::CgiRequest
   
+  # Returns true if the request has been proxied through Facebook.
   def from_facebook?
     request_parameters.has_key? 'fb_sig'
   end
@@ -9,16 +8,16 @@ class ActionController::CgiRequest
 end
 
 class ApplicationController
-#  unloadable # had to revert... instead, remove 'unloadable' from app/controllers/application.rb too
 
-  def facebook_rescues_path(template_name)
+  def facebook_rescues_path(template_name) #:nodoc:
     "#{File.dirname(__FILE__)}/../views/#{template_name}.fbml.erb"
   end
 
-  def facebook_template_path_for_local_rescue(exception)
+  def facebook_template_path_for_local_rescue(exception) #:nodoc:
     facebook_rescues_path(rescue_templates[exception.class.name])
   end
-             
+  
+  # Override the default rescue response.
   def rescue_action_locally(exception)
     if request.from_facebook?
         add_variables_to_assigns
@@ -31,7 +30,9 @@ class ApplicationController
           @template.render_file(facebook_template_path_for_local_rescue(exception), false))
 
         response.content_type = Mime::HTML
-        render_file(facebook_rescues_path("layout"))
+        # for Facebook, the HTTP status code must always be 200
+        # otherwise it discards the response body and renders its own error message
+        render_file(facebook_rescues_path("layout")) 
     else
       ActionController::Rescue::rescue_action_locally(exception)
     end

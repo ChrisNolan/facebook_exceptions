@@ -28,6 +28,10 @@ Facebook_exceptions is slated for eventual inclusion in RFacebook (http://rubyfo
 
 http://blog.evanweaver.com/images/facebook_exceptions_small.png
 
+== Troubleshooting
+
+If the exception view only works on the first request, or only if <tt>cache_classes</tt> is set to <tt>true</tt>, make sure that ApplicationController is not marked as <tt>unloadable</tt>.
+
 == Further resources
 
 * http://blog.evanweaver.com/pages/code#facebook_exceptions
