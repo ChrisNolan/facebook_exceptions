@@ -20,8 +20,6 @@ Run the following command in the root of your Rails app:
 
 There is no gem version. 
 
-Facebook_exceptions is slated for eventual inclusion in RFacebook (http://rubyforge.org/projects/rfacebook/).
-
 = Extras
 
 == Sample
@@ -30,10 +28,11 @@ http://blog.evanweaver.com/images/facebook_exceptions_small.png
 
 == Troubleshooting
 
-If the exception view only works on the first request, or only if <tt>cache_classes</tt> is set to <tt>true</tt>, make sure that ApplicationController is not marked as <tt>unloadable</tt>.
+If the exception view only works on the first request, or only if <tt>cache_classes</tt> is set to <tt>true</tt>, make sure that ApplicationController is not marked as <tt>unloadable</tt>
 
 == Further resources
 
 * http://blog.evanweaver.com/pages/code#facebook_exceptions
 * http://rubyforge.org/forum/forum.php?forum_id=15872
 
+Note that facebook_exceptions is slated for eventual inclusion in RFacebook (http://rubyforge.org/projects/rfacebook/).
