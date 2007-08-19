@@ -32,7 +32,8 @@ If the exception view only works on the first request, make sure that Applicatio
 
 == Further resources
 
-* http://blog.evanweaver.com/pages/code#facebook_exceptions
 * http://rubyforge.org/forum/forum.php?forum_id=15872
+* http://blog.evanweaver.com/articles/2007/07/13/developing-a-facebook-app-locally
+* http://blog.evanweaver.com/articles/2007/07/12/see-your-hand-in-front-of-your-uh-face-facebook_exceptions
 
 Note that facebook_exceptions is slated for eventual inclusion in RFacebook (http://rubyforge.org/projects/rfacebook/).
