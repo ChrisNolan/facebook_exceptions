@@ -1,6 +1,6 @@
 
 require 'rubygems'
-gem 'echoe', '= 2.2'
+gem 'echoe'
 require 'echoe'
 
 Echoe.new('facebook_exceptions') do |p|
