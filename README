@@ -30,9 +30,12 @@ http://blog.evanweaver.com/files/facebook_exceptions_small.png
 
 If the exception view only works on the first request, make sure that ApplicationController is not marked as <tt>unloadable</tt>
 
-== Further resources
+== Reporting problems
 
 * http://rubyforge.org/forum/forum.php?forum_id=15872
+
+== Further resources
+
 * http://blog.evanweaver.com/articles/2007/07/13/developing-a-facebook-app-locally
 * http://blog.evanweaver.com/articles/2007/07/12/see-your-hand-in-front-of-your-uh-face-facebook_exceptions
 
