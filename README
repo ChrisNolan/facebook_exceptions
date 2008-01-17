@@ -5,11 +5,15 @@ A Rails plugin for rendering application errors directly within Facebook.
 
 == License
 
-Copyright (c) 2007 Cloudburst, LLC, released under the AFL 3.0.
+Copyright 2007 Cloudburst, LLC. Licensed under the AFL 3. See the included LICENSE file. 
+
+The public certificate for this gem is here[link:http://rubyforge.org/frs/download.php/25331/evan_weaver-original-public_cert.pem]. 
+
+If you like this software, please {make a donation to charity}[link:http://blog.evanweaver.com/donate/] or {recommend Evan}[link:http://www.workingwithrails.com/person/7739-evan-weaver] at Working with Rails.
 
 == Requirements
 
-* Edge Rails
+* Rails 2.0.2
 
 = Usage
 
@@ -32,7 +36,7 @@ If the exception view only works on the first request, make sure that Applicatio
 
 == Reporting problems
 
-* http://rubyforge.org/forum/forum.php?forum_id=15872
+The support forum is here[http://rubyforge.org/forum/forum.php?forum_id=15872].
 
 Patches and contributions are very welcome. Please note that contributors are required to assign copyright for their additions to Cloudburst, LLC.
 
