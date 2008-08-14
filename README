@@ -1,4 +1,3 @@
-
 facebook_exceptions
 
 A Rails plugin for rendering application errors directly within Facebook.
@@ -20,7 +19,7 @@ If you use this software, please {make a donation}[http://blog.evanweaver.com/do
 == Installation
 
 Run the following command in the root of your Rails app:
-  script/plugin install svn://rubyforge.org/var/svn/fauna/facebook_exceptions/trunk
+  script/plugin install git://github.com/fauna/facebook_exceptions.git
 
 There is no gem version. 
 
