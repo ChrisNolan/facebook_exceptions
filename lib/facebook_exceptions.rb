@@ -32,7 +32,7 @@ class ApplicationController
         response.content_type = Mime::HTML
         # for Facebook, the HTTP status code must always be 200
         # otherwise it discards the response body and renders its own error message
-        render_file(facebook_rescues_path("layout")) 
+        render :file => facebook_rescues_path("layout")
     else
       ActionController::Rescue::rescue_action_locally(exception)
     end

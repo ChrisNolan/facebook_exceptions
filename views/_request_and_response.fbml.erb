@@ -25,11 +25,11 @@
   <a href="#" clicktoshow="session">(Show)</a>
   <a href="#" clicktohide="session">(Hide)</a>
 </h2>
-<p id="session" style="display:none"><%= request.session.instance_variable_get("@data").inspect %></p>
+<p id="session" style="display:none"><%=h request.session.instance_variable_get("@data").inspect %></p>
 
 <h2>Response Headers       
   <a href="#" clicktoshow="response">(Show)</a>
   <a href="#" clicktohide="response">(Hide)</a>
 </h2>
-<p id="response" style="display:none"><%= h response ? response.headers.inspect : 'None' %></p>
+<p id="response" style="display:none"><%=h response ? response.headers.inspect : 'None' %></p>
 
